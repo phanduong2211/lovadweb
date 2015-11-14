@@ -10,7 +10,7 @@ class sideModule extends Model
     protected $table = 'sideshow';
 
     
-    protected $fillable = ['images', 'name', 'contents','details'];
+    protected $fillable = ['images', 'name', 'contents','details','url'];
 
   
 }

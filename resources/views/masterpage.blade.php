@@ -51,7 +51,7 @@
                             <li><a href="#service">Dịch Vụ</a></li>
                             <li><a href="#portfolio">Dự án</a></li>
                             <li><a href="#about">Giới Thiệu</a></li>
-                            <li><a href="#clients">Đối tác</a></li>
+                            <li><a href="#partner">Đối tác</a></li>
                             <li><a href="#price">Bảng Giá</a></li>
                             <li><a href="#contact">Liên Hệ</a></li>
                         </ul>
@@ -70,16 +70,16 @@
             <div class="section secondary-section">
                 <div class="container">
                     <div class="title">
-                        <h1>Contact Us</h1>
-                        <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                        <h1>Liện hệ</h1>
+                        <p></p>
                     </div>
                 </div>
                 <div class="map-wrapper">
-                    <div class="map-canvas" id="map-canvas">Loading map...</div>
+                    <div class="map-canvas" id="map-canvas"><?php echo $address->maps;?></div>
                     <div class="container">
                         <div class="row-fluid">
                             <div class="span5 contact-form centered">
-                                <h3>Say Hello</h3>
+                                <h3>Hãy cho chung tôi biết bạn muốn gì?</h3>
                                 <div id="successSend" class="alert alert-success invisible">
                                     <strong>Well done!</strong>Your message has been sent.</div>
                                 <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
@@ -114,43 +114,32 @@
                 </div>
                 <div class="container">
                     <div class="span9 center contact-info">
-                        <p>123 Fifth Avenue, 12th,Belgrade,SRB 11000</p>
-                        <p class="info-mail">ourstudio@somemail.com</p>
-                        <p>+11 234 567 890</p>
-                        <p>+11 286 543 850</p>
+                        <p>{{$address->address}}</p>
+                        <p class="info-mail">{{$address->email}}</p>
+                        <p>{{$address->phone}}</p>
                         <div class="title">
-                            <h3>We Are Social</h3>
+                            <h3>Kết nối với chúng tôi qua mạng xã hội</h3>
                         </div>
                     </div>
                     <div class="row-fluid centered">
                         <ul class="social">
                             <li>
-                                <a href="">
+                                <a target='_blank' href="{{$address->facebookpage}}">
                                     <span class="icon-facebook-circled"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a target='_blank' href="{{$address->twitterpage}}">
                                     <span class="icon-twitter-circled"></span>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
-                                    <span class="icon-linkedin-circled"></span>
+                                <a target='_blank' href="{{$address->youtubepage}}">
+                                    <span class="icon-vimeo-circled"></span>
                                 </a>
-                            </li>
+                            </li>                           
                             <li>
-                                <a href="">
-                                    <span class="icon-pinterest-circled"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <span class="icon-dribbble-circled"></span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
+                                <a target='_blank' href="{{$address->googlepage}}">
                                     <span class="icon-gplus-circled"></span>
                                 </a>
                             </li>

@@ -4,7 +4,7 @@ Portfolio section start -->
             <div class="container">
                 <div class=" title">
                     <h1 style="color:white">Dự Án Của Chúng Tôi</h1>
-                    <p>Dưới đây là một số dự án nổi bật mà chúng tôi đã từng làm.</p>
+                    <p>Dưới đây là một số dự án nổi bật mà chúng tôi đã từng làm gần đây.</p>
                 </div>
                 <ul class="nav nav-pills">
                     @foreach($categoryprtfolio as $values)
@@ -35,9 +35,9 @@ Portfolio section start -->
                                     <div>
                                         <span>Date</span>{{$values->created_at}}</div>
                                     <div>
-                                        <span>Skills</span>{{$values->skills}}</div>
+                                        <?php if($values->skills!="") echo "<span>skills</span>".$values->skills; ?></div>
                                     <div>
-                                        <span>Link</span>{{$values->url}}</div>
+                                        <?php if($values->url!="") echo "<span>Link</span>".$values->url; ?></div>
                                 </div>
                                 <p>{{$values->contents}}</p>
                             </div>

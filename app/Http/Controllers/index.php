@@ -18,7 +18,10 @@ use View;
        $portfolio = portfoliocontroller::get();
        $members=membercontroller::get();
        $idcategoryprtfolio = new categoryportfoliocontroller();
+       $planweb = planwebcontroller::get();
+       $address = addresscontroller::get();
     	return View::make('index',array("categoryprtfolio"=>$categoryprtfolio,"service"=>$service
-            ,"portfolio"=>$portfolio,"members"=>$members,"idcategoryprtfolio"=>$idcategoryprtfolio,"side"=>$side,"convert"=>$convert));
+            ,"portfolio"=>$portfolio,"members"=>$members,"idcategoryprtfolio"=>$idcategoryprtfolio,"side"=>$side,
+            "planweb"=>$planweb,"convert"=>$convert,"address"=>$address[0]));
     }
 }

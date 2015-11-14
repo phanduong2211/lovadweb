@@ -9,11 +9,11 @@
             <div class="triangle"></div>
             <div class="container centered">
                 <p class="large-text">We can do anything but we can't do everything, we need help of you!</p>
-                <a href="#" class="button">Purshase now</a>
+                <!-- <a href="#" class="button">Purshase now</a> -->
             </div>
         </div>
-       	@include('client')
-        @include('outclient')
+       	
+        @include('partner')
         @include('price')
      
 @stop()

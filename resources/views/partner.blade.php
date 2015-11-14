@@ -1,9 +1,9 @@
-<div class="section third-section">
+<div id="partner" class="section third-section">
             <div class="container centered">
                 <div class="sub-section">
                     <div class="title clearfix">
                         <div class="pull-left">
-                            <h3>Our Clients</h3>
+                            <h3>Đối tác của chúng tôi</h3>
                         </div>
                         <ul class="client-nav pull-right">
                             <li id="client-prev"></li>
