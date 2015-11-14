@@ -1,42 +1,26 @@
-<!-- Service section start -->
+Service section start -->
         <div class="section primary-section" id="service">
             <div class="container">
                 <!-- Start title section -->
                 <div class="title">
-                    <h1>What We Do?</h1>
+                    <h1>Dịch Vụ</h1>
                     <!-- Section's title goes here -->
-                    <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p>
+                   <!--  <p>Duis mollis placerat quam, eget laoreet tellus tempor eu. Quisque dapibus in purus in dignissim.</p> -->
                     <!--Simple description for section goes here. -->
                 </div>
                 <div class="row-fluid">
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="public/images/Service1.png" alt="service 1">
+                    @foreach($service as $values)
+                        <div class="span4" style="margin-left:0px">
+                            <div class="centered service">
+                                <div class="zoom-in">
+                                    <img class="img-rounded" src="public/images/{{$values->images}}" alt="{{$values->name}}">
+                                </div>
+                                <h3>{{$values->name}}</h3>
+                                <p>{{$values->contents}}</p>
                             </div>
-                            <h3>Modern Design</h3>
-                            <p>We Create Modern And Clean Theme For Your Business Company.</p>
                         </div>
-                    </div>
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="public/images/Service2.png" alt="service 2" />
-                            </div>
-                            <h3>Powerfull Theme</h3>
-                            <p>We Create Modern And Powerful Theme With Lots Animation And Features</p>
-                        </div>
-                    </div>
-                    <div class="span4">
-                        <div class="centered service">
-                            <div class="circle-border zoom-in">
-                                <img class="img-circle" src="public/images/Service3.png" alt="service 3">
-                            </div>
-                            <h3>Clean Code</h3>
-                            <p>We Create Modern And Powerful Html5 And CSS3 Code Easy For Read And Customize.</p>
-                        </div>
-                    </div>
+                    @endforeach                   
                 </div>
             </div>
         </div>
-        <!-- Service section end -->
+        <!-- Service section end

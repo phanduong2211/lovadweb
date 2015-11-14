@@ -11,6 +11,14 @@ use View;
 {
     public function getindex()
     {
-    	return View::make('index');
+        $service = servicecontroller::get();
+        $convert = new convertString();
+        $side = sidecontroller::getside();
+        $categoryprtfolio = categoryportfoliocontroller::get(); 
+       $portfolio = portfoliocontroller::get();
+       $members=membercontroller::get();
+       $idcategoryprtfolio = new categoryportfoliocontroller();
+    	return View::make('index',array("categoryprtfolio"=>$categoryprtfolio,"service"=>$service
+            ,"portfolio"=>$portfolio,"members"=>$members,"idcategoryprtfolio"=>$idcategoryprtfolio,"side"=>$side,"convert"=>$convert));
     }
 }

@@ -240,7 +240,6 @@ p {
 **********/
  .thumbnail {
     width:100%;
-    height:100%;
     padding:0;
     overflow: hidden;
     position: relative;
@@ -416,8 +415,8 @@ p {
     height:60px;
 }
 .service img {
-    width:150px;
-    height:150px;
+    width:250px;
+    height:230px;
 }
 /*
 3.2 Portfolio

@@ -7,15 +7,13 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use View;
-use App\Http\modules\menu;
+use App\Http\modules\sideModule;
 use Illuminate\Database\Eloquent\Model;
- class masterpage extends Controller
+ class sidecontroller extends Controller
 {
-    public static function getMenu()
+    public static function getside()
     {
-    	/*$menu = new menu();
-    	$menu->get();*/
-    	$menu=menu::get();
-    	return $menu;
+        $side = new sideModule();
+        return $side->get();    	
     }
 }

@@ -10,7 +10,7 @@
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pluton Theme by BraphBerry.com</title>
+        <title></title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
@@ -36,8 +36,8 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a href="#" class="brand">
-                        <img src="public/images/logo.png" width="120" height="40" alt="Logo" />
+                    <a href="#" class="">
+                        <img src="public/images/logo.png" style="max-width:200px;height:100px !important" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -47,13 +47,13 @@
                     <!-- Main navigation -->
                     <div class="nav-collapse collapse pull-right">
                         <ul class="nav" id="top-navigation">
-                            <li class="active"><a href="#home">Home</a></li>
-                            <li><a href="#service">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#clients">Clients</a></li>
-                            <li><a href="#price">Price</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li class="active"><a href="#home">Trang Chủ</a></li>
+                            <li><a href="#service">Dịch Vụ</a></li>
+                            <li><a href="#portfolio">Dự án</a></li>
+                            <li><a href="#about">Giới Thiệu</a></li>
+                            <li><a href="#clients">Đối tác</a></li>
+                            <li><a href="#price">Bảng Giá</a></li>
+                            <li><a href="#contact">Liên Hệ</a></li>
                         </ul>
                     </div>
                     <!-- End main navigation -->
@@ -162,7 +162,7 @@
         <!-- Contact section edn -->
         <!-- Footer section start -->
         <div class="footer">
-            <p>&copy; 2013 Theme by <a href="http://www.graphberry.com">GraphBerry</a>, <a href="http://goo.gl/NM84K2">Documentation</a></p>
+            <p>&copy; 2015 design by lovadweb<a href=""></a><a href=""></a></p>
         </div>
         <!-- Footer section end -->
         <!-- ScrollUp button start -->
