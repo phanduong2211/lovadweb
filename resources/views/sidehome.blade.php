@@ -11,7 +11,7 @@
                     <div class="da-slide">
                         <h2 class="fittext2">{{$values->name}}</h2>
                         <p>{{$values->contents}}</p>
-                        <a href="{{$values->url}}" class="da-link button">Chi Tiết</a>
+                        <a href="pages/{{$values->url}}.html" class="da-link button">Chi Tiết</a>
                         <div class="da-img">
                             <img src="public/images/{{$values->images}}" class="img-Thumbnail" alt="image01">
                         </div>

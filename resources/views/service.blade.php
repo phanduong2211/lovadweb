@@ -1,4 +1,4 @@
-Service section start -->
+<!--Service section start -->
         <div class="section primary-section" id="service">
             <div class="container">
                 <!-- Start title section -->
@@ -15,8 +15,8 @@ Service section start -->
                                 <div class="zoom-in">
                                     <img class="img-rounded" src="public/images/{{$values->images}}" alt="{{$values->name}}">
                                 </div>
-                                <h3>{{$values->name}}</h3>
-                                <p>{{$values->contents}}</p>
+                                <h3><a style="color:yellow" href="pages/{{$values->url}}.html">{{$values->name}}</a></h3>
+                                <p style="color:white">{{$values->contents}}</p>
                             </div>
                         </div>
                     @endforeach                   

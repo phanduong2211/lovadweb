@@ -10,7 +10,7 @@ class planweb extends Model
     protected $table = 'planweb';
 
     
-    protected $fillable = ['name','price','setup','support'];
+    protected $fillable = ['name','price','setup','support','details'];
 
   
 }

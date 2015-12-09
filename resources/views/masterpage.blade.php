@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<!--
- * A Design by GraphBerry
- * Author: GraphBerry
- * Author URL: http://graphberry.com
- * License: http://graphberry.com/pages/license
--->
+
 <html lang="en">
     
     <head>
         <meta charset=utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <title></title>
         <!-- Load Roboto font -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Load css styles -->
-        <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/bootstrap-responsive.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/pluton.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/bootstrap.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/bootstrap-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/pluton.css" />
         <!--[if IE 7]>
             <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css" />
         <![endif]-->
-        <link rel="stylesheet" type="text/css" href="public/css/jquery.cslider.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/jquery.bxslider.css" />
-        <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/jquery.cslider.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/jquery.bxslider.css" />
+        <link rel="stylesheet" type="text/css" href="{{Asset('')}}/public/css/animate.css" />
         <!-- Fav and touch icons -->
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/images/ico/apple-touch-icon-144.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="public/images/ico/apple-touch-icon-114.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="public/images/apple-touch-icon-72.png">
-        <link rel="apple-touch-icon-precomposed" href="public/images/ico/apple-touch-icon-57.png">
-        <link rel="shortcut icon" href="public/images/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{Asset('')}}/public/images/ico/apple-touch-icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{Asset('')}}/public/images/ico/apple-touch-icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{Asset('')}}/public/images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="{{Asset('')}}/public/images/ico/apple-touch-icon-57.png">
+        <link rel="shortcut icon" href="{{Asset('')}}/public/images/ico/favicon.ico">
+        <style type="text/css">
+            .close {
+              
+              line-height: 18px;
+              color: #000000;
+              text-shadow: 0 1px 0 #ffffff;
+              opacity: 0.2;
+              filter: alpha(opacity=20);
+              text-decoration: none;
+            }
+            .close:hover {
+              color: #000000;
+              text-decoration: none;
+              opacity: 0.4;
+              filter: alpha(opacity=40);
+              cursor: pointer;
+            }
+        </style>
     </head>
     
     <body>
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container">
-                    <a href="#" class="">
-                        <img src="public/images/logo.png" style="max-width:200px;height:100px !important" alt="Logo" />
+                    <a href="{{Asset('')}}" class="">
+                        <img src="{{Asset('')}}/public/images/logo.png" style="max-width:200px;height:100px !important" alt="Logo" />
                         <!-- This is website logo -->
                     </a>
                     <!-- Navigation button, visible on small resolution -->
@@ -63,6 +77,7 @@
         <!-- Start home section -->
         <section>
             @yield('index')
+            @yield('sidepages')
         </section>
         <!-- Newsletter section end -->
         <!-- Contact section start -->
@@ -79,11 +94,12 @@
                     <div class="container">
                         <div class="row-fluid">
                             <div class="span5 contact-form centered">
+                                <a class="close">&times;</a>
                                 <h3>Hãy cho chung tôi biết bạn muốn gì?</h3>
                                 <div id="successSend" class="alert alert-success invisible">
                                     <strong>Well done!</strong>Your message has been sent.</div>
                                 <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
-                                <form id="contact-form" action="php/mail.php">
+                                <form id="contact-form" action="{{Asset('')}}/php/mail.php">
                                     <div class="control-group">
                                         <div class="controls">
                                             <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
@@ -149,6 +165,7 @@
             </div>
         </div>
         <!-- Contact section edn -->
+       
         <!-- Footer section start -->
         <div class="footer">
             <p>&copy; 2015 design by lovadweb<a href=""></a><a href=""></a></p>
@@ -162,20 +179,31 @@
         </div>
         <!-- ScrollUp button end -->
         <!-- Include javascript -->
-        <script src="public/js/jquery.js"></script>
-        <script type="text/javascript" src="public/js/jquery.mixitup.js"></script>
-        <script type="text/javascript" src="public/js/bootstrap.js"></script>
-        <script type="text/javascript" src="public/js/modernizr.custom.js"></script>
-        <script type="text/javascript" src="public/js/jquery.bxslider.js"></script>
-        <script type="text/javascript" src="public/js/jquery.cslider.js"></script>
-        <script type="text/javascript" src="public/js/jquery.placeholder.js"></script>
-        <script type="text/javascript" src="public/js/jquery.inview.js"></script>
+        <script src="{{Asset('')}}/public/js/jquery.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/jquery.mixitup.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/bootstrap.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/jquery.bxslider.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/jquery.cslider.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/jquery.placeholder.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/jquery.inview.js"></script>
         <!-- Load google maps api and call initializeMap function defined in app.js -->
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=initializeMap"></script>
         <!-- css3-mediaqueries.js for IE8 or older -->
         <!--[if lt IE 9]>
             <script src="public/js/respond.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="public/js/app.js"></script>
+        <script type="text/javascript" src="{{Asset('')}}/public/js/app.js"></script>
+        <script type="text/javascript">
+                $(".close").click(function () {
+
+                //there are multiple elements which has .closeTab icon so close the tab whose close icon is clicked
+                var tabContentId = $(this).parent().attr("href");
+                $(this).parent().parent().remove(); //remove li of tab
+                $('#myTab a:last').tab('show'); // Select first tab
+                $(tabContentId).remove(); //remove respective tab content
+
+});
+        </script>
     </body>
 </html>

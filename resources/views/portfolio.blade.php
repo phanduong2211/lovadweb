@@ -30,16 +30,16 @@ Portfolio section start -->
                                     </span>
                                 </div>
                                 <div class="project-info">
-                                    <div>
-                                        <span>Client</span>{{$values->namecustom}}</div>
-                                    <div>
-                                        <span>Date</span>{{$values->created_at}}</div>
-                                    <div>
+                                    <div style="color:white">
+                                        <span>Client</span style="color:white">{{$values->namecustom}}</div>
+                                    <div style="color:white">
+                                        <span>Date</span style="color:white">{{$values->created_at}}</div>
+                                    <div style="color:white">
                                         <?php if($values->skills!="") echo "<span>skills</span>".$values->skills; ?></div>
-                                    <div>
+                                    <div style="color:white">
                                         <?php if($values->url!="") echo "<span>Link</span>".$values->url; ?></div>
                                 </div>
-                                <p>{{$values->contents}}</p>
+                                <p><pre>{{$values->contents}}</pre></p>
                             </div>
                         </div>
                     </div>
@@ -54,8 +54,7 @@ Portfolio section start -->
                                 <a href="#single-project" class="more show_hide" rel="#div{{$values->id}}">
                                     <i class="icon-plus"></i>
                                 </a>
-                                <h3>{{$values->name}}</h3>
-                                <p>{{$values->contents}}...</p>
+                                <h3>[{{$idcategoryprtfolio->find($values->id_categoryportfolio)->name}}] {{$values->name}}</h3>
                                 <div class="mask"></div>
                             </div>
                         </li>
